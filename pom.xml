@@ -21,55 +21,38 @@
   <repositories>
 
     <repository>
-      <id>cloudera</id>
-      <url>https://repository.cloudera.com/artifactory/simple/repo</url>
-      <snapshots>
+    <snapshots>
         <enabled>false</enabled>
       </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
+      <!-- external artifactory
+      <id>libs-releases</id>
+      <name>libs-releases</name>
+      <url>http://inadco.artifactoryonline.com/inadco/libs-releases</url>
+      -->
+      <!-- INTERNAL Artifactory
+      -->
+      <id>libs-release</id>
+      <name>libs-release</name>
+      <url>http://artifactory.inadco.gg/artifactory/libs-release</url>
     </repository>
 
     <repository>
-      <id>central</id>
-      <url>http://repo1.maven.org/maven2</url>
       <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <releases>
         <enabled>true</enabled>
-      </releases>
-    </repository>
-
-    <!-- this is specifically for rJava R distribution jars only which are 
-      not currently pulished in maven public repos afaik. -->
-    <repository>
-      <id>dlyubimov-maven-repo-releases</id>
-      <url>https://github.com/dlyubimov/dlyubimov-maven-repo/raw/master/releases</url>
-      <snapshots>
-        <enabled>false</enabled>
       </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-    </repository>
+      <!-- external artifactory
+      <id>libs-snapshots</id>
+      <name>libs-snapshots</name>
+      <url>http://inadco.artifactoryonline.com/inadco/libs-snapshots</url>
+      -->
+      <!-- INTERNAL Artifactory
+      -->
+      <id>libs-snapshot</id>
+      <name>libs-snapshot</name>
+      <url>http://artifactory.inadco.gg/artifactory/libs-snapshot</url>
+	</repository>
 
   </repositories>
-
-
-  <distributionManagement>
-    <repository>
-      <id>dlyubimov-maven-repo-releases</id>
-      <name>releases</name>
-      <url>https://github.com/dlyubimov/dlyubimov-maven-repo/releases</url>
-    </repository>
-    <snapshotRepository>
-      <id>dlyubimov-maven-repo-snapshots</id>
-      <name>snapshots</name>
-      <url>https://github.com/dlyubimov/dlyubimov-maven-repo/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
 
 
   <modules>
